@@ -1,1 +1,0 @@
-System.register(["vite/modulepreload-polyfill","styles/style.css","../src/map.js","../src/script.js"],(function(){"use strict";return{setters:[function(){},function(){},function(){},function(){}],execute:function(){}}}));
