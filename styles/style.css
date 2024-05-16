@@ -126,5 +126,12 @@ align-items: center;
     .wrapper{
         width: 320px;
     }
+    .data-wrapper{
+        flex-direction: column;
+    }
+    .left-bar{
+       visibility: hidden;
+    }
+  
     
 }
