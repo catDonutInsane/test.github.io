@@ -132,6 +132,9 @@ align-items: center;
     .left-bar{
        visibility: hidden;
     }
-  
+   .header{
+        align-items: center;
+        justify-content: center;
+    }
     
 }
