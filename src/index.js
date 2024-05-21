@@ -24,7 +24,7 @@ async function main() {
         new YMapDefaultFeaturesLayer({})
       ]
     );
-
+    
     // Create default markers and add them to the map
     markersGeoJsonSource.forEach((markerSource) => {
       const marker = new YMapDefaultMarker(markerSource);

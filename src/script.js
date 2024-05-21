@@ -13,7 +13,7 @@ clock.addEventListener("click", ()=>insertHTML("clock"))
 
 let tabs = document.querySelectorAll(".tabs-item")
 
-
+let container = document.getElementById("app")
 window.addEventListener("popstate", ()=>{
    render()
   })
@@ -33,18 +33,24 @@ let render = ()=>{
 
 
 function getPortfolio(){
-  document.getElementById("app").innerHTML = ``
+  container.innerHTML = ``
+  container.style.height = "100%"
   fetch("pages/portfolio.html")
   .then(res => res.text())
-  .then(html => document.getElementById("app").innerHTML =html)
+  .then(html => container.innerHTML =html)
 }
 function getMap(){
-  document.getElementById("app").innerHTML = ``
-            const body = document.createElement('map-card');
-          document.getElementById("app").appendChild(body);
+  container.innerHTML = ``
+  container.style.height = "500px"
+  const body = document.createElement('map-card');
+  container.appendChild(body);
 }
 function getClock(){
-    document.getElementById("app").innerHTML = ``
+  container.innerHTML = ``
+  container.style.height = "500px"
+  let time = sessionStorage.getItem("spentTime")
+  container.innerHTML = time
+
     
 }
 function insertHTML(url){

@@ -9,7 +9,8 @@ function getLocation() {
             var longitude = position.coords.longitude;
            LOCATION.center=  [longitude,latitude]
            markersGeoJsonSource[0].coordinates = [longitude,latitude]
-        });
+        }
+    );
     } else {
         console.log('Геолокация не поддерживается');
     }
