@@ -2,8 +2,6 @@
 getLocation()
 
 function getLocation() {
-    // Если геолокация поддерживается браузером
-    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             let latitude = position.coords.latitude;
             let longitude = position.coords.longitude;
@@ -12,9 +10,7 @@ function getLocation() {
         }
         
     );
-    } else {
-        console.log('Геолокация не поддерживается');
-    }
+    
 
 }
 

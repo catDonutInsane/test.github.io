@@ -3,7 +3,7 @@ customElements.define('map-card', class extends HTMLElement {
     connectedCallback() {
       this.attachShadow({mode: 'open'});
 
-      if (navigator.geolocation) {
+      
         navigator.geolocation.getCurrentPosition(function(position) {
           let oldScript = document.getElementById('q'); 
           let timestamp = new Date().getTime();
@@ -26,9 +26,7 @@ customElements.define('map-card', class extends HTMLElement {
         }
           
     );
-    } else {
-        console.log('Геолокация не поддерживается');
-    }
+    
     }
     
   });
