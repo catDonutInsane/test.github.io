@@ -5,8 +5,8 @@ customElements.define('map-card', class extends HTMLElement {
 
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-          var oldScript = document.getElementById('q'); 
-          var timestamp = new Date().getTime();
+          let oldScript = document.getElementById('q'); 
+          let timestamp = new Date().getTime();
              
     
           let script = document.createElement('script')
@@ -20,15 +20,15 @@ customElements.define('map-card', class extends HTMLElement {
             document.body.append(script)
           }
         },
-        eror=>document.getElementById("app").innerHTML = "<div>Разрешите доступ к геолокаци для отображения карты</div>"
+        error=>{
+          document.getElementById("app").innerHTML = "<div>Разрешите доступ к геолокаци для отображения карты</div>"
+          console.log("Возникла ошибка: ", error)
+        }
+          
     );
     } else {
         console.log('Геолокация не поддерживается');
     }
-
-
-     
-      
     }
     
   });
