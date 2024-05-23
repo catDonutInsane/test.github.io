@@ -8,7 +8,6 @@ export default defineConfig({
         target: 'es2017',
         outDir: 'build',
     },
-    base:"/",
     server: {
         port: 3000,
         host: '0.0.0.0',

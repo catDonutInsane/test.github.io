@@ -2,7 +2,7 @@
     "name": "spa_example",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "src/script.js",
     "homepage": "https://catDonutInsane.github.io/test.github.io",
     "scripts": {
       "predeploy": "npm run build",
