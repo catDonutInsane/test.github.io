@@ -27,11 +27,17 @@ body{
     width: 100%;
     display: flex;
     padding: 30px;
+    justify-content: center;
  
 }
 
 .data-wrapper{
     min-height: 500px;
+}
+.clockWrapper{
+    width: 100%;
+    
+    
 }
 .header{
     

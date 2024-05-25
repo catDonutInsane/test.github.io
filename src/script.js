@@ -12,7 +12,7 @@ let clock = document.querySelector('.tabs-item_third')
 clock.addEventListener("click", ()=>insertHTML("clock"))
 
 let tabs = document.querySelectorAll(".tabs-item")
-
+let clockWrapper = document.querySelector(".clockWrapper")
 let container = document.getElementById("app")
 window.addEventListener("popstate", ()=>{
    render()
@@ -49,8 +49,8 @@ function getMap(){
 function getClock(){
   container.innerHTML = ``
   container.style.height = "500px"
-  let time = sessionStorage.getItem("spentTime")
-  container.innerHTML = time
+  let time = sessionStorage.getItem("spentTime")  
+  container.innerHTML = `<div class="clockWrapper">${time}</div>`
 
     
 }
@@ -58,8 +58,6 @@ function insertHTML(url){
     if(url=="portfolio"){
       window.history.pushState("portfolio","","portfolio")
       getPortfolio()
-     
-      
     }
     else if(url=="clock"){
         window.history.pushState("clock","","clock")

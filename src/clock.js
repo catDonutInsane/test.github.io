@@ -21,7 +21,7 @@ export default function timer(){
         let hours = Math.floor(totalTime / (1000 * 60 * 60));
         sessionStorage.setItem('spentTime', `${hours} : ${minutes} : ${seconds}`);
         if (new URL(window.location.href).pathname.slice(1)==="clock"){
-            container.innerHTML = `<div>${hours} : ${minutes} : ${seconds}</div>`
+            container.innerHTML = `<div class="clockWrapper">${hours} : ${minutes} : ${seconds}</div>`
         
         }
         
