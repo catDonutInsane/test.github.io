@@ -40,7 +40,7 @@ function getPortfolio(){
   .then(html => container.innerHTML =html)
 }
 function getMap(){
-  container.innerHTML = `<img id="loader" src="../img/icons/Loader.gif"></img>` 
+  container.innerHTML = `<img id="loader" src="../img/icons/loader.gif"></img>` 
   container.style.height = "500px"
   const body = document.createElement('map-card');
   container.appendChild(body);
