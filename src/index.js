@@ -2,15 +2,20 @@ import { LOCATION, markersGeoJsonSource } from "./location.js";
 
 window.map = null;
 
-main();
+let container = document.getElementById("app")
+main()
+
+
+
 async function main() {
     // Waiting for all api elements to be loaded
-    await ymaps3.ready;
-    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
-
+    await ymaps3.ready
+      const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer} = ymaps3;
     // Import the package to add a default marker
     const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
-
+    
+    
+    container.innerHTML=''
     // Initialize the map
     map = new YMap(
       // Pass the link to the HTMLElement of the container
@@ -25,9 +30,9 @@ async function main() {
       ]
     );
     
-    // Create default markers and add them to the map
-    markersGeoJsonSource.forEach((markerSource) => {
-      const marker = new YMapDefaultMarker(markerSource);
-      map.addChild(marker);
-    });
+      // Create default markers and add them to the map
+      markersGeoJsonSource.forEach((markerSource) => {
+        const marker = new YMapDefaultMarker(markerSource);
+        map.addChild(marker);
+      });
   }

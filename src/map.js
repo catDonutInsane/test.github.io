@@ -1,15 +1,17 @@
+
+
 customElements.define('map-card', class extends HTMLElement {
     
     connectedCallback() {
       this.attachShadow({mode: 'open'});
-
+      
       
         navigator.geolocation.getCurrentPosition(function(position) {
           let oldScript = document.getElementById('q'); 
           let timestamp = new Date().getTime();
              
     
-          let script = document.createElement('script')
+          let script = document.createElement('script') 
           script.type= "module"
           script.src = "src/index.js?"+timestamp
           script.id = "q"

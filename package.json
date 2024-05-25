@@ -2,10 +2,9 @@
     "name": "spa_example",
     "version": "1.0.0",
     "description": "",
-    "main": "src/script.js",
-    "homepage": "https://catDonutInsane.github.io/test.github.io",
+    "homepage": "https://sfsdfdss.netlify.app/",
     "scripts": {
-      "predeploy": "npm run build",
+      "predeploy": "npm run build-prod",
       "deploy": "gh-pages -d build",
         "start": "vite",
         "build": "cross-env BUILD_TYPE=dev vite build",

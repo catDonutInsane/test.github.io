@@ -2,6 +2,7 @@
 getLocation()
 
 function getLocation() {
+    
         navigator.geolocation.getCurrentPosition(function(position) {
             let latitude = position.coords.latitude;
             let longitude = position.coords.longitude;

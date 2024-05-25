@@ -40,10 +40,11 @@ function getPortfolio(){
   .then(html => container.innerHTML =html)
 }
 function getMap(){
-  container.innerHTML = ``
+  container.innerHTML = `<img id="loader" src="../img/icons/Loader.gif"></img>` 
   container.style.height = "500px"
   const body = document.createElement('map-card');
   container.appendChild(body);
+  
 }
 function getClock(){
   container.innerHTML = ``
